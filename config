@@ -43,7 +43,6 @@ bindsym $mod+x restart
 bindsym $mod+Shift+z exec i3 exit
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -124,4 +123,4 @@ client.unfocused        #404040 #000000 #808080 #404040   #404040
 client.urgent           #FF5454 #000000 #FFFFFF #FF5454   #FF5454
 client.placeholder      #404040 #000000 #808080 #404040   #404040
 
-include configLaptop
+include configDevice
