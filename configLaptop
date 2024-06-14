@@ -1,0 +1,14 @@
+# vim: set filetype=i3config :
+
+exec --no-startup-id Compositor.sh disable
+exec --no-startup-id SetupTouchpad.sh
+exec_always --no-startup-id LaunchPolybar.sh laptop
+exec --no-startup-id PowerManagement.sh &
+
+# disable picom
+bindsym $mod+o exec --no-startup-id Compositor.sh disable
+# enable picom
+bindsym $mod+p exec --no-startup-id Compositor.sh enable
+
+bindsym XF86MonBrightnessDown exec --no-startup-id Brightness.sh -c -1920
+bindsym XF86MonBrightnessUp exec --no-startup-id Brightness.sh -c 1920
