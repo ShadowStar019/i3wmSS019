@@ -1,0 +1,4 @@
+# vim: set filetype=i3config :
+
+exec_always --no-startup-id LaunchPolybar.sh desktop
+exec --no-startup-id PowerManagement.sh
