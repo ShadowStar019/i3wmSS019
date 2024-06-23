@@ -4,6 +4,7 @@ exec --no-startup-id Compositor.sh disable
 exec --no-startup-id SetupTouchpad.sh
 exec_always --no-startup-id LaunchPolybar.sh laptop
 exec --no-startup-id PowerManagement.sh &
+exec --no-startup-id input-remapper-control --command autoload
 
 # disable picom
 bindsym $mod+o exec --no-startup-id Compositor.sh disable

@@ -7,7 +7,7 @@ focus_follows_mouse no
 exec --no-startup-id KeyboardLayout.sh US
 exec --no-startup-id feh --bg-scale $HOME/Stuff/Wallpapers/Wallpaper0.png
 exec --no-startup-id Startup.sh
-exec /usr/lib/polkit-kde-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
 # gracefully close current window
 bindsym $mod+q kill
