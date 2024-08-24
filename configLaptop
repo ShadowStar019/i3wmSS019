@@ -1,6 +1,7 @@
 # vim: set filetype=i3config :
 
-exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 && input-remapper-control --command autoload
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
+exec --no-startup-id sleep 2; input-remapper-control --command autoload
 exec --no-startup-id Compositor.sh disable
 exec --no-startup-id SetupTouchpad.sh
 exec_always --no-startup-id LaunchPolybar.sh laptop

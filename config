@@ -8,28 +8,28 @@ exec --no-startup-id KeyboardLayout.sh US
 exec --no-startup-id feh --bg-scale $HOME/Stuff/Wallpapers/Wallpaper0.png
 exec --no-startup-id Startup.sh
 
-# gracefully close current window
-bindsym $mod+q kill
 # change container layout to splith
-bindsym $mod+w layout splith
+bindsym $mod+q layout splith
 # change container layout to splitv
-bindsym $mod+e layout splitv
+bindsym $mod+w layout splitv
 # change container layout to tabbed
-bindsym $mod+r layout tabbed
+bindsym $mod+e layout tabbed
 # change container layout to stacking
-bindsym $mod+t layout stacking
-# split container horizontally
-bindsym $mod+Shift+w split h
-# split container vertically
-bindsym $mod+Shift+e split v
-# toggle tiling / floating
-bindsym $mod+Shift+r floating toggle
-# change focus between tiling / floating windows
-bindsym $mod+Shift+t focus mode_toggle
-# enter fullscreen mode for the focused container
-bindsym $mod+y fullscreen toggle
+bindsym $mod+r layout stacking
 # focus on parent
-bindsym $mod+Shift+y focus parent
+bindsym $mod+t focus parent
+# focus on child
+bindsym $mod+y focus child
+# split container horizontally
+bindsym $mod+Shift+q split h
+# split container vertically
+bindsym $mod+Shift+w split v
+# toggle tiling / floating
+bindsym $mod+Shift+e floating toggle
+# change focus between tiling / floating windows
+bindsym $mod+Shift+r focus mode_toggle
+# enter fullscreen mode for the focused container
+bindsym $mod+Shift+t fullscreen toggle
 # change keyboard layout to us
 bindsym $mod+u exec --no-startup-id KeyboardLayout.sh US
 # change keyboard layout to intl
@@ -57,11 +57,11 @@ bindsym $mod+s exec flameshot gui
 # start flameshot and take full screenshot
 bindsym $mod+Shift+s exec flameshot full
 # start obs
-bindsym $mod+d exec obs
-# start kdenlive
-bindsym $mod+f exec kdenlive
+bindsym $mod+d exec okular
 # start dmenu
-bindsym $mod+g exec --no-startup-id "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#80A0FF' -sf '#000000' -fn 'Fira Code-14'"
+bindsym $mod+f exec --no-startup-id "dmenu_run -nf '#FFFFFF' -nb '#000000' -sb '#80A0FF' -sf '#000000' -fn 'Fira Code-14'"
+# gracefully close current window
+bindsym $mod+g kill
 
 # autoclicker
 bindsym $mod+Shift+n exec xdotool click --repeat $(((2**31)-1)) --delay 100 1
